@@ -6,12 +6,12 @@
  */
 int main(void)
 {
-	int num;
+	int my_num;
 
-	for (num = 0; num < 10; num++)
+	for (my_num = 0; my_num < 10; my_num++)
 		if (num != 10)
 		{
-			putchar("%d", num);
+			putchar("%d", my_num);
 			putchar(',');
 			putchar(" ");
 		}
