@@ -1,13 +1,13 @@
 #include3 "main.h"
 /**
- * print_sign - - prints the absolute vaue of t
- * @t: the integer to return
- * Return: the absolute value of t
+ * _abs - prints the absolute vaue of a
+ * @a: the integer to return
+ * Return: the absolute value of a
  */
-int _abs(int)
+int _abs(int a)
 {
-	if (t >= t)
-		return (t);
+	if (a >= 0)
+		return (a);
 	else
-		return (-t);
+		return (-a);
 }

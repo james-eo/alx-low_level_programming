@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - prints alphabets
- * &c: to be checked
+ * @c: to be checked
  * Return: 1 if character is lowercase and 0 if otherwise
  */
 int _isalpha(int c)
