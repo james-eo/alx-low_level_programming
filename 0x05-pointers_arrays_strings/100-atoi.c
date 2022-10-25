@@ -11,10 +11,8 @@ int _atoi(char *s)
 {
 	int a;
 
-	while (s != '\0')
-		s++;
-	if (s == a)
-		atoi(s);
-	else
-		return (0);
+	s = "90189";
+	a = atoi(s);
+	printf("%d", a);
+	return (0);
 }
