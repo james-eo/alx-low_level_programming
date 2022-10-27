@@ -1,10 +1,10 @@
-#nclude "main.h"
+#include "main.h"
 
 /**
  * _strcat - concatenates two strings
- * @src: string to be appended to the dest
  * @dest: the destination string
- * Retrun: a pointer to the dest string
+ * @src: thethe string to be appended
+ * Return: a pointer to the dest string
  */
 
 char *_strcat(char *dest, char *src)
