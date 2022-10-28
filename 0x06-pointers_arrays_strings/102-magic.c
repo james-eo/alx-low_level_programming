@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ * main - prints 98 by a new number
+ * Return: 0
+ */
 
 int main(void)
 {
@@ -16,6 +20,7 @@ int main(void)
 	  *  - you are not allowed to modify p
 	  *  - only one statement
 	  *  - you are not allowed to code anything else than this line of code
+	  *  main - prints 98 by a new number
 	  */
 	*(p + 5) = 98;
 	/* ...so that this prints 98\n */
