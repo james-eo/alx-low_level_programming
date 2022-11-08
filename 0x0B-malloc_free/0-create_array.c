@@ -32,7 +32,7 @@ char *create_array(unsigned int size, char c)
 
 	while (p < size)
 	{
-		*(buffer * p) = c;
+		*(buffer + p) = c;
 		p++;
 	}
 	return (buffer);
