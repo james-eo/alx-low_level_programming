@@ -3,45 +3,56 @@
 #include <stdlib.h>
 
 /**
- * _strlen - count of arrays
- * @c: array elements to be counted
- * Return: 1
- */
-
-int _strlen(char *c)
+  *_strlen - counts and returns string length
+  * @s: that's the string
+  *
+  * Return: the length
+  */
+int _strlen(char *s)
 {
-	unsigned int i = 0;
-	while (c[i] != '\0')
+	int counter = 0;
+	if (!*s)
+		return (0);
+	while (*s)
 	{
-		i++;
+		counter++;
+		s++;
 	}
-	return (i);
+	return (counter);
 }
 
 /**
- * str_concat - caoncatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: pointer
+ * str_concat - concatenates two strings
+ * @s1: one string
+ * @s2: the other
+ * Return: pointer to cat string
  */
+
 
 char *str_concat(char *s1, char *s2)
 {
-	char *dest;
-	unsigned int a, b, size;
-
-	if (s1 == NULL)
+	char *new;
+	unsigned int i;
+	unsigned int j;
+	int total = 0;
+	if (!s1)
 		s1 = "";
-	size(_strlen(s1) + _strlen(s2) + 1);
-
-	dest = (char *) malloc(size * sizeof(char));
-
-	if (dest == 0)
-		return (NULL);
-	for (a = 0; *(s1 + a) != '\0'; i++)
+	if (!s2)
+		s2 = "";
+	total += _strlen(s1) + _strlen(s2);
+	new = malloc((total * sizeof(char)) + 1);
+	if (new == NULL)
 	{
-		*(dest + i) = *(s1 + i);
-		i++;
+		return (NULL);
+	for (i = 0; s1[i]; i++)
+	{
+		new[i] = s1[i];
 	}
-	return (dest);
+	for (j = 0; s2[j]; j++, i++)
+	{
+		new[i] = s2[j];
+	}
+	new[i] = '\0';
+	return (new);
 }
+

@@ -3,64 +3,32 @@
 #include <stdlib.h>
 
 /**
- * _strlen - returns a pointer to a newly allocated space in memory
- * @s: string
- * Return: a pointer on success
+ * _strdup - malloc new str and copy *str into it
+ * @str: the string we copy
+ * Return: pointer to new string
  */
-
-char *_strlen(char *s)
+char *_strdup(char *str)
 {
 	unsigned int i;
-
-	i = 0;
-
-	while (s[i] != '\0')
+	int count = 0;
+	char *dest;
+	if (str == NULL)
+		return (NULL);
+	for (i = 0; str[i]; i++)
 	{
-		i++;
+		count++;
 	}
-	return (i);
-}
-
-/**
- * _srtcpy - duplicates _strdup
- * @src: array element
- * @dest: destinstion array
- * Return: dest
- */
-
-char *_srtcpy(char *dest, char *src)
-{
-	int i = 0;
-
-	while (src[i] != '\0')
+	count += 1;
+	dest = malloc(count * sizeof(char));
+	if (dest == NULL)
 	{
-		dest[i] = src[i];
-		i++;
+		return (NULL);
 	}
-	dest[i] = '\0';
-
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		dest[i] = str[i];
+	}
+	dest[i] = str[i];
 	return (dest);
 }
 
-/**
- * _strdup - array of strings
- * @str: array elements
- * Return: pointer
- */
-
-char *_strdup(char *str)
-{
-	char *dst;
-	unsigned int size;
-
-	if (str == 0)
-		return (NULL);
-	size = _strlen(str) + 1;
-
-	dst = (char *) malloc(size * sizeof(char));
-
-	if (dst == 0)
-		return (NULL);
-	_strcpy(dst, str);
-	return (dst);
-}
