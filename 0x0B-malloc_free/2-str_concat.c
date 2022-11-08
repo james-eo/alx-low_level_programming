@@ -2,21 +2,18 @@
 
 /**
  * _strlen - count of arrays
- * @s: array elements to be counted
+ * @c: array elements to be counted
  * Return: 1
  */
 
 int _strlen(char *c)
 {
-	 unsigned int i;
-
-	 i = 0;
-
-	 while (c[i] != '\0')
-	 {
-		 i++;
-	 }
-	 return (i);
+	unsigned int i = 0;
+	while (c[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 /**
@@ -33,8 +30,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 		s1 = "";
-
-	size (_strlen(s1) + _strlen(s2) + 1);
+	size(_strlen(s1) + _strlen(s2) + 1);
 
 	dest = (char *) malloc(size * sizeof(char));
 
