@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * main - multiplies tow positive numbers
  * @argc: argument
