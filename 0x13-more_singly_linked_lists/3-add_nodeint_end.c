@@ -5,23 +5,27 @@
  * of a linked list
  * @head: head of a list.
  * @n: n element.
+ *
  * Return: address of the new element. NUll if it failed.
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new_node;
-	listint_t *temp = *head;
+	listint_t *new;
+	listint_t *temp;
 
-	new_node = malloc(sizeof(listint_t));
+	(void)temp;
 
-	if (new_node == NULL)
+	new = malloc(sizeof(listint_t));
+
+	if (new == NULL)
 		return (NULL);
 
 	new->n = n;
 	new->next = NULL;
+	temp = *head;
 	if (*head == NULL)
 	{
-		*head = new_node;
+		*head = new;
 	}
 	else
 	{
@@ -29,7 +33,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		{
 			temp = temp->next;
 		}
-		temp->next = new_node;
+		temp->next = new;
 	}
 
 	return (*head);
