@@ -18,7 +18,7 @@ int main(void)
 				putchar(one + '0');
 				putchar(two + '0');
 				putchar(three + '0');
-				
+
 				if (one < 7 || two < 8 || three < 9)
 				{
 					putchar(',');
@@ -28,6 +28,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
