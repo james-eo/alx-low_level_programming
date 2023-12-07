@@ -10,8 +10,8 @@
 #include <stdlib.h>
 
 /**
- * struct dlistint_s - doubly linked list
- * @n: integer
+ * struct dlistint_s - doubly linked lists
+ * @n: the integer
  * @prev: points to the previous node
  * @next: points to the next node
  *
