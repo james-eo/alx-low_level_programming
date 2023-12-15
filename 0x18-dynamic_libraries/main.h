@@ -7,7 +7,7 @@
 /*
  * File: main.h
  * Author: [Your Name]
- * Desc: Header file containing function prototypes 
+ * Desc: Header file containing function prototypes
  * for the dynamic library libdynamic.so.
  */
 
