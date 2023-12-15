@@ -8,16 +8,18 @@
  * Return: the pointer to dest
  */
 
-char *_strcpy(char *dest, char *src) {
-    char *ptr = dest;
+char *_strcpy(char *dest, char *src)
+{
+	char *ptr = dest;
 
-    while (*src != '\0') {
-        *dest = *src;
-        dest++;
-        src++;
-    }
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
 
-    *dest = '\0';
+	*dest = '\0';
 
-    return ptr;
+	return (ptr);
 }

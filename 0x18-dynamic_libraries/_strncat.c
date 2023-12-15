@@ -1,7 +1,8 @@
- #include "main.h"
- 
+#include "main.h"
+
 /**
- * _strncat - concatenates n characters from the source string to the destination string
+ * _strncat - concatenates n characters from the source string
+ * to the destination string
  * @dest: the destination string
  * @src: the source string
  * @n: the number of characters to concatenate
@@ -12,7 +13,7 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	char *ptr = dest;
-	
+
 	while (*dest != '\0')
 		dest++;
 	while (*src != '\0' && n > 0)
@@ -22,8 +23,8 @@ char *_strncat(char *dest, char *src, int n)
 		src++;
 		n--;
 	}
-	
+
 	*dest = '\0';
-	
-	return ptr;
+
+	return (ptr);
 }
